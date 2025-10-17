@@ -1,0 +1,23 @@
+* {
+    /* 공통적으로 사용되는 폰트, 여백, 패딩 ... */
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.part {
+    display: flex;
+}
+
+.left {
+    width: 100px;
+    margin-right: 50px;
+}
+
+.middle {
+    width: 400px;
+}
