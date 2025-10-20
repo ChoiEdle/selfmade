@@ -1,42 +1,44 @@
 import '../styles/Signup.css';
 
-export function Signup () {
+export function Signup() {
     return (
-        <>
+        <div className="signup-container">
             <h2>회원가입</h2>
-            <div><span>*</span>필수입력사항</div>
+            <div className='essential'><span>*</span>필수입력사항</div>
             <ul>
                 <li>
-                    <ul className='part'>
+                    <ul className='part id'>
                         <li className='left'><span>아이디</span></li>
-                        <li><input type="text" /></li>
+                        <li><input className="input-field" type="text" /></li>
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part pwd'>
                         <li className='left'><span>비밀번호</span></li>
-                        <li className='middle'><input type="password" /></li>
+                        <li><input className="input-field" type="password" /></li>
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part pwd'>
                         <li className='left'><span>비밀번호확인</span></li>
-                        <li className='middle'><input type="password" /></li>
+                        <li><input className="input-field" type="password" /></li>
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part name'>
                         <li className='left'><span>이름</span></li>
-                        <li className='middle'><input type="text" /></li>
+                        <li><input className="input-field" type="text" /></li>
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part email'>
                         <li className='left'><span>이메일</span></li>
                         <li className='middle'>
-                            <input type="text" />
+                            <input className="input-field" type="text" />
+                        </li>
+                        <li>
                             <span>@</span>
-                            <select>
+                            <select className="input-field">
                                 <option value="default">선택하기</option>
                                 <option value="naver.com">naver.com</option>
                                 <option value="gmail.com">gmail.com</option>
@@ -51,64 +53,62 @@ export function Signup () {
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part phone'>
                         <li className='left'><span>휴대폰</span></li>
-                        <li className='middle'>
-                            <input type="text" />
-                        </li>
+                        <li><input className="input-field" type="text" /></li>
                         <li>
-                            <button type="button">인증번호 받기</button>
+                            <button className="btn" type="button">인증번호 받기</button>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part address'>
                         <li className='left'><span>주소</span></li>
                         <li className='middle'>
-                            <div><button type="button">주소 검색</button></div>
+                            <div><button className="btn" type="button">주소 검색</button></div>
                             <span>배송지에 따라 상품 정보가 달라질 수 있습니다.</span>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part gender'>
                         <li className='left'>
                             <span>성별</span>
                         </li>
                         <li className='middle'>
                             <div>
-                                <input type="radio" name="gender"/><span>남자</span>
+                                <input type="radio" name="male"/><span>남자</span>
                             </div>
                             <div>
-                                <input type="radio" name="gender"/><span>여자</span>
+                                <input type="radio" name="female"/><span>여자</span>
                             </div>
                             <div>
-                                <input type="radio" name="gender"/><span>선택안함</span>
+                                <input type="radio" name="unknown"/><span>선택안함</span>
                             </div>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part date'>
                         <li className='left'><span>생년월일</span></li>
                         <li className='middle'>
-                            <input type="text" />
+                            <input className="input-field" type="text" />
                             <span>/</span>
-                            <input type="text" />
+                            <input className="input-field" type="text" />
                             <span>/</span>
-                            <input type="text" />
+                            <input className="input-field" type="text" />
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part plus'>
                         <li><span className='left'>추가입력 사항</span></li>
                         <li className='middle'>
                             <input type="radio" />
                             <span>친구초대 추천인 아이디</span>
                             <div>
-                                <input type="text" />
-                                <button type="button">아이디 확인</button>
+                                <input className="input-field" type="text" />
+                                <button className="btn" type="button">아이디 확인</button>
                                 <li><span>가입 후 7일 이내 첫 주문 배송완료 시, 친구초대 적립금이 지급됩니다.</span></li>
                                 <li><span>ID 입력시, 대소문자 및 띄어쓰기에 유의 부탁드립니다.</span></li>
                                 <li><span>가입 이후는 수정이 불가능합니다.</span></li>
@@ -117,11 +117,11 @@ export function Signup () {
                     </ul>
                 </li>
                 <li>
-                    <ul className='part'>
+                    <ul className='part agree'>
                         <li className='left'>
                             <span>이용약관동의</span>
                         </li>
-                        <li>
+                        <li className='middle'>
                             <div>
                                 <input type="checkbox" />
                                 <span>전체 동의합니다.</span>
@@ -186,8 +186,8 @@ export function Signup () {
                         </li>
                     </ul>
                 </li>
-                <li><button type="button">가입하기</button></li>
+                <li><button className="btn-submit" type="button">가입하기</button></li>
             </ul>
-        </>
+        </div>
     );
 }
