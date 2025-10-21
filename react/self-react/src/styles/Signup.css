@@ -171,27 +171,98 @@ input[type="checkbox"]:checked + span {
     font-size: 12px;
 }
 
-/* 모바일 반응형 */
-@media (max-width: 768px) {
-    .signup-container {
-        padding: 15px;
-    }
-
-    .left {
-        width: 100px;
-    }
-
-    .middle {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .input-field, .btn, .btn-submit {
-        width: 100%;
-    }
-
-    .signup-container .part li {
-        flex-direction: column;
-        align-items: flex-start;
-    }
+.gender .middle {
+    display: flex;
+    
+    justify-content: space-between;
 }
+
+.genderList {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100px;
+    text-align: center;
+}
+
+.genderButton {
+    width: 50px;
+    background-color: aqua;
+}
+
+.date > .middle {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.input-date {
+    width: 80px;
+}
+
+.plusAfter {
+    display: none !important;
+}
+
+.agree > .left {
+    width: 120px;
+}
+
+.agree > .middle {
+    width: 360px;
+}
+
+.agree > .middle > div {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.allAgree {
+    text-align: left;
+    width: 400px;
+    display: flex;
+    flex-direction: column !important;
+}
+
+.allAgree > div {
+    display: flex;
+    width: 500px;
+}
+
+.sns {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+
+.allAgree > div > span, .essential {
+    padding-left: 20px;
+    font-size: 12px;
+    color: #888;
+}
+.essential > span {
+    color: red;
+}
+
+.btn-address {
+    padding-left: 3px;
+    margin-bottom: 5px;
+    width:260px;
+}
+
+.phone {
+    /* background-color: aqua; */
+    width:550px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.phone-btn {
+    margin-top: 5px;
+}
+
