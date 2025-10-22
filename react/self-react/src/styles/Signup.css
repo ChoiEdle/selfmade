@@ -28,7 +28,7 @@ h2 {
     font-size: 24px;
     font-weight: 600;
     margin-bottom: 10px;
-    color: #333;
+    color: #000000ff;
 }
 
 .signup-container > div {
@@ -50,7 +50,7 @@ h2 {
 .left {
     width: 120px;
     font-size: 14px;
-    color: #555;
+    color: #000000ff;
     padding-right: 15px;
 }
 
@@ -72,13 +72,13 @@ h2 {
 }
 
 .input-field:focus {
-    border-color: #3f9ae5;
+    border-color: #4949b1ff;
     outline: none;
 }
 
 .btn {
     padding: 10px 20px;
-    background-color: #3f9ae5;
+    background-color: #4949b1ff;
     color: white;
     border: none;
     border-radius: 5px;
@@ -87,9 +87,9 @@ h2 {
     font-size: 14px;
 }
 
-.btn:hover {
+/* .btn:hover {
     background-color: #2d82c3;
-}
+} */
 
 span {
     font-size: 14px;
@@ -111,7 +111,7 @@ input[type="radio"], input[type="checkbox"] {
 
 input[type="radio"]:checked + span,
 input[type="checkbox"]:checked + span {
-    color: #3f9ae5;
+    color: #4949b1ff;
 }
 
 /* 이메일 셀렉트 */
@@ -125,7 +125,7 @@ input[type="checkbox"]:checked + span {
 }
 
 .signup-container .part li select:focus {
-    border-color: #3f9ae5;
+    border-color: #4949b1ff;
 }
 
 /* 주소 및 전화번호 */
@@ -154,16 +154,12 @@ input[type="checkbox"]:checked + span {
 .signup-container .btn-submit {
     width: 100%;
     padding: 12px;
-    background-color: #3f9ae5;
+    background-color: #4949b1ff;
     color: white;
     border: none;
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-}
-
-.signup-container .btn-submit:hover {
-    background-color: #2d82c3;
 }
 
 .signup-container .signup-container > div > div {
@@ -187,7 +183,6 @@ input[type="checkbox"]:checked + span {
 
 .genderButton {
     width: 50px;
-    background-color: aqua;
 }
 
 .date > .middle {
@@ -245,7 +240,7 @@ input[type="checkbox"]:checked + span {
     color: #888;
 }
 .essential > span {
-    color: red;
+    color:  #ff0000ff;
 }
 
 .btn-address {

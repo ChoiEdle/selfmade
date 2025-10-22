@@ -4,7 +4,7 @@ export function Signup() {
     return (
         <div className="signup-container">
             <h2>회원가입</h2>
-            <div className='essential'><span>*</span>필수입력사항</div>
+            <div className='essential'><span>* </span>필수입력사항</div>
             <ul>
                 <li>
                     <ul className='part id'>
@@ -33,20 +33,19 @@ export function Signup() {
                 <li>
                     <ul className='part email'>
                         <li className='left'><span>이메일</span></li>
-                        <li className='middle'>
+                        <li>
                             <input className="input-field" type="text" placeholder='예:marketcandy' />
                         </li>
                         <li>
-                            <span>@</span>
                             <select className="input-field">
                                 <option value="default">선택하기</option>
-                                <option value="naver.com">naver.com</option>
-                                <option value="gmail.com">gmail.com</option>
-                                <option value="hanmail.net">hanmail.net</option>
-                                <option value="kakao.com">kakao.com</option>
-                                <option value="daum.net">daum.net</option>
-                                <option value="hotmail.com">hotmail.com</option>
-                                <option value="yahoo.co.kr">yahoo.co.kr</option>
+                                <option value="@naver.com">@naver.com</option>
+                                <option value="@gmail.com">@gmail.com</option>
+                                <option value="@hanmail.net">@hanmail.net</option>
+                                <option value="@kakao.com">@kakao.com</option>
+                                <option value="@daum.net">@daum.net</option>
+                                <option value="@hotmail.com">@hotmail.com</option>
+                                <option value="@yahoo.co.kr">@yahoo.co.kr</option>
                                 <option value="">직접 입력</option>
                             </select>
                         </li>
@@ -90,14 +89,6 @@ export function Signup() {
                                 </div>
                                 <div>
                                     <span>여자</span>
-                                </div>
-                            </div>
-                            <div className='genderList'>
-                                <div>
-                                    <input type="radio" name="gender" className='genderButton'/>
-                                </div>
-                                <div>
-                                    <span>선택안함</span>
                                 </div>
                             </div>
                         </li>
