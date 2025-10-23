@@ -1,9 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Layout } from './pages/Layout.jsx';
 import { Home } from './pages/Home.jsx';
-import { SelectSignup } from './pages/SelectSignup.jsx';
 import { Signup } from './pages/Signup.jsx';
-import { BuyerCheck } from './pages/BuyerCheck.jsx'
+import { Cart } from './pages/Cart.jsx';
 import './styles/selfmade.css'
 
 function App() {
@@ -13,7 +12,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home/>} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/buyerCheck' element={<BuyerCheck />} />
+          <Route path='/cart' element={<Cart />} />
         </Route>
       </Routes>
     </BrowserRouter>

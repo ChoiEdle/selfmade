@@ -9,21 +9,21 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.essential {
+.signup-container .essential {
     text-align: right;
 }
 
 /* 리스트 스타일 */
-ul {
+.signup-container ul {
   list-style: none;
   padding: 0;
 }
 
-li {
+.signup-container li {
   margin-bottom: 20px;
 }
 
-h2 {
+.signup-container h2 {
     text-align: center;
     font-size: 24px;
     font-weight: 600;
@@ -47,21 +47,21 @@ h2 {
     justify-content: flex-start;
 }
 
-.left {
+.signup-container .left {
     width: 120px;
     font-size: 14px;
     color: #000000ff;
     padding-right: 15px;
 }
 
-.middle {
+.signup-container .middle {
     display: flex;
     flex-grow: 1;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.input-field {
+.signup-container .input-field {
     width: 250px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -71,12 +71,12 @@ h2 {
     box-sizing: border-box;
 }
 
-.input-field:focus {
+.signup-container .input-field:focus {
     border-color: #4949b1ff;
     outline: none;
 }
 
-.btn {
+.signup-container .btn {
     padding: 10px 20px;
     background-color: #4949b1ff;
     color: white;
@@ -87,30 +87,31 @@ h2 {
     font-size: 14px;
 }
 
-/* .btn:hover {
+/* .signup-container .btn:hover {
     background-color: #2d82c3;
 } */
 
-span {
+.signup-container span {
     font-size: 14px;
 }
 
-button:disabled {
+.signup-container button:disabled {
     background-color: #ccc;
     cursor: not-allowed;
 }
 
-li {
+.signup-container li {
     margin-bottom: 15px;
 }
 
 /* 라디오 버튼 및 체크박스 스타일 */
-input[type="radio"], input[type="checkbox"] {
+.signup-container input[type="radio"], 
+.signup-container input[type="checkbox"] {
     margin-right: 5px;
 }
 
-input[type="radio"]:checked + span,
-input[type="checkbox"]:checked + span {
+.signup-container input[type="radio"]:checked + span,
+.signup-container input[type="checkbox"]:checked + span {
     color: #4949b1ff;
 }
 
@@ -167,13 +168,12 @@ input[type="checkbox"]:checked + span {
     font-size: 12px;
 }
 
-.gender .middle {
+.signup-container .gender .middle {
     display: flex;
-    
     justify-content: space-between;
 }
 
-.genderList {
+.signup-container .genderList {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -181,33 +181,33 @@ input[type="checkbox"]:checked + span {
     text-align: center;
 }
 
-.genderButton {
+.signup-container .genderButton {
     width: 50px;
 }
 
-.date > .middle {
+.signup-container .date > .middle {
     display: flex;
     justify-content: space-between;
     text-align: center;
 }
 
-.input-date {
+.signup-container .input-date {
     width: 80px;
 }
 
-.plusAfter {
+.signup-container .plusAfter {
     display: none !important;
 }
 
-.agree > .left {
+.signup-container .agree > .left {
     width: 120px;
 }
 
-.agree > .middle {
+.signup-container .agree > .middle {
     width: 360px;
 }
 
-.agree > .middle > div {
+.signup-container .agree > .middle > div {
     width: 500px;
     display: flex;
     flex-direction: row;
@@ -216,48 +216,48 @@ input[type="checkbox"]:checked + span {
     padding-bottom: 20px;
 }
 
-.allAgree {
+.signup-container .allAgree {
     text-align: left;
     width: 400px;
     display: flex;
     flex-direction: column !important;
 }
 
-.allAgree > div {
+.signup-container .allAgree > div {
     display: flex;
     width: 500px;
 }
 
-.sns {
+.signup-container .sns {
     display: flex;
     justify-content: space-around;
     padding-top: 5px;
 }
 
-.allAgree > div > span, .essential {
+.signup-container .allAgree > div > span, 
+.signup-container .essential {
     padding-left: 20px;
     font-size: 12px;
     color: #888;
 }
-.essential > span {
-    color:  #ff0000ff;
+
+.signup-container .essential > span {
+    color: #ff0000ff;
 }
 
-.btn-address {
+.signup-container .btn-address {
     padding-left: 3px;
     margin-bottom: 5px;
-    width:260px;
+    width: 260px;
 }
 
-.phone {
-    /* background-color: aqua; */
-    width:550px;
+.signup-container .phone {
+    width: 550px;
     display: flex;
     align-items: center;
     text-align: center;
 }
 
-.phone-btn {
+.signup-container .phone-btn {
     margin-top: 5px;
 }
-

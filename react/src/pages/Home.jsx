@@ -5,6 +5,7 @@ export function Home () {
         <div className="home">
          <h1>홈</h1>
          <Link to={'/signup'}>회원가입</Link>
+         <Link to={'/cart'}>카트</Link>
         </div>
     )
 }
