@@ -30,7 +30,7 @@ export function Signup() {
     }
     return (
         <div className="signup-container">
-            <h2>회원가입</h2>
+            <h2 className='signup-header'>회원가입</h2>
             <div className='essential'><span>* </span>필수입력사항</div>
             <form onSubmit={handleSubmit}>
                 <ul>

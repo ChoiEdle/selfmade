@@ -9,6 +9,18 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* ===== 헤더 ===== */
+.signup-container .signup-header {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #4949b1ff;
+  border-bottom: 3px solid #4949b1ff;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
 .signup-container .essential {
     text-align: right;
 }
