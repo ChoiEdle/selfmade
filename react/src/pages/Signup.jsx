@@ -1,8 +1,32 @@
 import '../styles/Signup.css';
+import { useRef, useState } from 'react';
 
 export function Signup() {
+    const [form, setForm] = useState({});
+    const yearRef = useRef(null);
+    const monthRef = useRef(null);
+    const dayRef = useRef(null);
+
+    const handleChangeForm = (e) => {
+        const {name, value} = e.target;
+
+        setForm({...form,[name]:value});    //스프레드 연산자 이용
+        // setForm(prev => ({...prev, [name]:value})); //callback 함수 이용
+        // setErrors({...initForm(initArray), emailDomain: ""});
+        
+        // ✅ 자동 포커스 이동
+        if (name === "dateYear" && value.length === 4) {
+            monthRef.current?.focus();
+        } else if (name === "dateMonth" && value.length === 2) {
+            dayRef.current?.focus();
+        }
+    }    
+
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        const formData = {...form, "email":form.emailName.concat(form.emailDomain),  "date":form.dateYear.concat('-', form.dateMonth, '-', form.dateDay)};
+        console.log(formData);
     }
     return (
         <div className="signup-container">
@@ -13,35 +37,35 @@ export function Signup() {
                     <li>
                         <ul className='part id'>
                             <li className='left'><span>아이디</span></li>
-                            <li><input className="input-field" type="text" placeholder='아이디를 입력해주세요' /></li>
+                            <li><input className="input-field" type="text" placeholder='아이디를 입력해주세요' name='id' value={form.id} onChange={handleChangeForm} /></li>
                         </ul>
                     </li>
                     <li>
                         <ul className='part pwd'>
                             <li className='left'><span>비밀번호</span></li>
-                            <li><input className="input-field" type="password" placeholder='비밀번호를 입력해주세요' /></li>
+                            <li><input className="input-field" type="password" placeholder='비밀번호를 입력해주세요' name='pwd' value={form.pwd} onChange={handleChangeForm} /></li>
                         </ul>
                     </li>
                     <li>
                         <ul className='part pwd'>
                             <li className='left'><span>비밀번호확인</span></li>
-                            <li><input className="input-field" type="password" placeholder='비밀번호를 한번 더 입력해주세요' /></li>
+                            <li><input className="input-field" type="password" placeholder='비밀번호를 한번 더 입력해주세요' name='cpwd' value={form.cpwd} onChange={handleChangeForm} /></li>
                         </ul>
                     </li>
                     <li>
                         <ul className='part name'>
                             <li className='left'><span>이름</span></li>
-                            <li><input className="input-field" type="text" placeholder='이름을 입력해주세요' /></li>
+                            <li><input className="input-field" type="text" placeholder='이름을 입력해주세요' name='name' value={form.name} onChange={handleChangeForm} /></li>
                         </ul>
                     </li>
                     <li>
                         <ul className='part email'>
                             <li className='left'><span>이메일</span></li>
                             <li>
-                                <input className="input-field" type="text" placeholder='예:marketcandy' />
+                                <input className="input-field" type="text" placeholder='예:marketcandy' name='emailName' value={form.emailName} onChange={handleChangeForm} />
                             </li>
                             <li>
-                                <select className="input-field">
+                                <select className="input-field" name='emailDomain' value={form.emailDomain} onChange={handleChangeForm} >
                                     <option value="default">선택하기</option>
                                     <option value="@naver.com">@naver.com</option>
                                     <option value="@gmail.com">@gmail.com</option>
@@ -58,7 +82,7 @@ export function Signup() {
                     <li>
                         <ul className='part phone'>
                             <li className='left'><span>휴대폰</span></li>
-                            <li><input className="input-field" type="text" placeholder='숫자만 입력해주세요' /></li>
+                            <li><input className="input-field" type="text" placeholder='숫자만 입력해주세요' name='phone' value={form.phone} onChange={handleChangeForm} /></li>
                             <li className='phone-btn'>
                                 <button className="btn" type="button">인증번호 받기</button>
                             </li>
@@ -81,7 +105,7 @@ export function Signup() {
                             <li className='middle'>
                                 <div className='genderList'>
                                     <div>
-                                        <input type="radio" name="gender" className='genderButton'/>
+                                        <input type="radio" name="gender" className='genderButton' value='male' onChange={handleChangeForm}/>
                                     </div>
                                     <div>
                                         <span>남자</span>
@@ -89,7 +113,7 @@ export function Signup() {
                                 </div>
                                 <div className='genderList'>
                                     <div>
-                                        <input type="radio" name="gender" className='genderButton'/>
+                                        <input type="radio" name="gender" className='genderButton' value='female' onChange={handleChangeForm}/>
                                     </div>
                                     <div>
                                         <span>여자</span>
@@ -103,19 +127,19 @@ export function Signup() {
                             <li className='left'><span>생년월일</span></li>
                             <li className='middle'>
                                 <div>
-                                    <input className="input-field input-date" type="text" placeholder='YYYY' />
+                                    <input className="input-field input-date" ref={yearRef} type="text" maxLength={4} placeholder='YYYY' name='dateYear' value={form.dateYear} onChange={handleChangeForm} />
                                 </div>
                                 <div>
                                     <span>/</span>
                                 </div>
                                 <div>
-                                    <input className="input-field input-date" type="text" placeholder='MM' />
+                                    <input className="input-field input-date" ref={monthRef} type="text" maxLength={2} placeholder='MM' name='dateMonth' value={form.dateMonth} onChange={handleChangeForm} />
                                 </div>
                                 <div>
                                     <span>/</span>
                                 </div>
                                 <div>
-                                    <input className="input-field input-date" type="text" placeholder='DD' />
+                                    <input className="input-field input-date" ref={dayRef} type="text" maxLength={2} placeholder='DD' name='dateDay' value={form.dateDay} onChange={handleChangeForm} />
                                 </div>
                             </li>
                         </ul>
@@ -212,7 +236,7 @@ export function Signup() {
                             </li>
                         </ul>
                     </li>
-                    <li><button className="btn-submit" type="button">가입하기</button></li>
+                    <li><button className="btn-submit" type="submit">가입하기</button></li>
                 </ul>
             </form>
         </div>
