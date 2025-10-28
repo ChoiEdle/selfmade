@@ -1,7 +1,10 @@
-import '../styles/Signup.css';
 import { useRef, useState } from 'react';
+import '../styles/components/Signup.css';
+import { getSignup } from 'features/auth/authAPI';
+import { useDispatch } from 'react-redux';
 
 export function Signup() {
+    const dispatch = useDispatch();
     const [form, setForm] = useState({});
     const yearRef = useRef(null);
     const monthRef = useRef(null);
@@ -23,14 +26,21 @@ export function Signup() {
     }    
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
-        const formData = {...form, "email":form.emailName.concat(form.emailDomain),  "date":form.dateYear.concat('-', form.dateMonth, '-', form.dateDay)};
+        const param = {};
+        const formData = {
+            ...form, 
+            "email":form.emailName.concat(form.emailDomain),  
+            "date":form.dateYear.concat('-', form.dateMonth, '-', form.dateDay),
+            "phone":form.phone.slice(0,3).concat('-', form.phone.slice(3,7), '-', form.phone.slice(7,11))
+        };
         console.log(formData);
+        const result = await dispatch(getSignup(formData, param));
     }
     return (
         <div className="signup-container">
-            <h2 className='signup-header'>회원가입</h2>
+            <h2>회원가입</h2>
             <div className='essential'><span>* </span>필수입력사항</div>
             <form onSubmit={handleSubmit}>
                 <ul>
@@ -105,7 +115,7 @@ export function Signup() {
                             <li className='middle'>
                                 <div className='genderList'>
                                     <div>
-                                        <input type="radio" name="gender" className='genderButton' value='male' onChange={handleChangeForm}/>
+                                        <input type="radio" name="gender" className='genderButton' value='M' onChange={handleChangeForm}/>
                                     </div>
                                     <div>
                                         <span>남자</span>
@@ -113,7 +123,7 @@ export function Signup() {
                                 </div>
                                 <div className='genderList'>
                                     <div>
-                                        <input type="radio" name="gender" className='genderButton' value='female' onChange={handleChangeForm}/>
+                                        <input type="radio" name="gender" className='genderButton' value='F' onChange={handleChangeForm}/>
                                     </div>
                                     <div>
                                         <span>여자</span>
