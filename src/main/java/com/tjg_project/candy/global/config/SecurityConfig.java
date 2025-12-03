@@ -54,7 +54,7 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://localhost:3000", "https://localhost:3000", "http://127.0.0.1:3000")); // 프론트 도메인
+        configuration.setAllowedOrigins(List.of("https://front-testing-five.vercel.app/", "http://localhost:3000", "https://localhost:3000", "http://127.0.0.1:3000")); // 프론트 도메인
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true); // 쿠키/헤더 인증 허용
