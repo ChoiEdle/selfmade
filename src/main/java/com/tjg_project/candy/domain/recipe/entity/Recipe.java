@@ -47,7 +47,7 @@ public class Recipe {
     private String ingredients;
 
     @Lob
-    @Column(name = "ingredients", columnDefinition = "text")
+    @Column(name = "steps", columnDefinition = "text")
     private String steps;
 
     @Column(length = 300)
