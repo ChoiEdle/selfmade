@@ -5,6 +5,9 @@ WORKDIR /app
 # 프로젝트 전체 복사
 COPY . .
 
+# Gradle Wrapper에 실행 권한 부여
+RUN chmod +x ./gradlew
+
 # Gradle Wrapper로 빌드 (테스트 제외)
 RUN ./gradlew clean bootJar -x test
 
