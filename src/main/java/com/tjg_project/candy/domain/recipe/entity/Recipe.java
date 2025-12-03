@@ -43,9 +43,11 @@ public class Recipe {
     private String difficulty;  // 🔥 추가됨!
 
     @Lob
+    @Column(name = "ingredients", columnDefinition = "text")
     private String ingredients;
 
     @Lob
+    @Column(name = "ingredients", columnDefinition = "text")
     private String steps;
 
     @Column(length = 300)
