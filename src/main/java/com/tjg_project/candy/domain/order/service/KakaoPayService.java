@@ -40,9 +40,9 @@ public class KakaoPayService {
         params.add("quantity", String.valueOf(kakaoPay.getQty()));
         params.add("total_amount", String.valueOf(kakaoPay.getTotalAmount()));
         params.add("tax_free_amount", "0");
-        params.add("approval_url", "http://localhost:8080/payment/qr/success?orderId=" + kakaoPay.getOrderId());
-        params.add("cancel_url", "http://localhost:8080/payment/qr/cancel?orderId=" + kakaoPay.getOrderId());
-        params.add("fail_url", "http://localhost:8080/payment/qr/fail?orderId=" + kakaoPay.getOrderId());
+        params.add("approval_url", "https://selfmade-umqd.onrender.com/payment/qr/success?orderId=" + kakaoPay.getOrderId());
+        params.add("cancel_url", "https://selfmade-umqd.onrender.com/payment/qr/cancel?orderId=" + kakaoPay.getOrderId());
+        params.add("fail_url", "https://selfmade-umqd.onrender.com/payment/qr/fail?orderId=" + kakaoPay.getOrderId());
 
         HttpEntity<MultiValueMap<String, String>> body = new HttpEntity<>(params, getHeaders());
 
