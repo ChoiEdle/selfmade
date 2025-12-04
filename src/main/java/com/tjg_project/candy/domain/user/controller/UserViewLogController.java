@@ -29,6 +29,10 @@ public class UserViewLogController {
     @GetMapping("/recent-subcat/{upk}")
     public ResponseEntity<?> getRecentSubCategory(@PathVariable Long upk) {
         Long subCat = userViewLogService.getRecentSubCategory(upk);
-        return ResponseEntity.ok(Map.of("recentSubCategory", subCat));
+        if(subCat != null) {
+            return ResponseEntity.ok(Map.of("recentSubCategory", subCat));
+        } else {
+            return ResponseEntity.ok(Map.of());
+        }
     }
 }
