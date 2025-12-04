@@ -47,9 +47,9 @@ public class KakaoPayService {
         params.add("tax_free_amount", "0"); // 필요 시 사용
 
         // 콜백 URL에 orderId를 함께 전달 (승인 단계에서 사용)
-        params.add("approval_url", "http://localhost:8080/payment/qr/success?orderId=" + orderId);
-        params.add("cancel_url",   "http://localhost:8080/payment/qr/cancel?orderId=" + orderId);
-        params.add("fail_url",     "http://localhost:8080/payment/qr/fail?orderId=" + orderId);
+        params.add("approval_url", "https://selfmade-umqd.onrender.com/payment/qr/success?orderId=" + orderId);
+        params.add("cancel_url",   "https://selfmade-umqd.onrender.com/payment/qr/cancel?orderId=" + orderId);
+        params.add("fail_url",     "https://selfmade-umqd.onrender.com/payment/qr/fail?orderId=" + orderId);
 
         HttpEntity<MultiValueMap<String, String>> body = new HttpEntity<>(params, getHeaders());
 
