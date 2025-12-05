@@ -27,7 +27,7 @@ public class IpCheckController {
         } catch (Exception e) {
             return "Error: " + e.getMessage();
         }
-
+        System.out.println(output.toString());
         return "Current Outbound IP: " + output.toString();
     }
 }

@@ -40,7 +40,7 @@ public class SecurityConfig {
                 )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth ->
-                        auth.requestMatchers("/", "/login", "/product/**", "/notice/**", "/member/**",
+                        auth.requestMatchers("/", "/login", "/product/**", "/notice/**", "/member/**", "/check-ip",
                                 "/orders/**", "/payment/**", "/delivery/**", "/auth/**", "/oauth2/**", "/csrf",
                                 "/view/**", "/category/**","/coupon/**","/recipe/**","/images/**","/api/forecast/**","/api/forecast/predict/**","/api/chatbot/**","/api/analytics/conversion/**","/excel/**","/api/admin/pricing/**","/api/admin/reviews/**","/advertise/**").permitAll().anyRequest().authenticated())
                 .oauth2Login(oauth -> oauth     // ✅ OAuth2 로그인 활성화
