@@ -40,7 +40,7 @@ public class KakaoPayService {
         MultiValueMap<String, String> params = new LinkedMultiValueMap<>();
         params.add("cid", CID);                                     //가맹점 코드 (테스트용)
         params.add("partner_order_id", orderId);                    // ✅ 꼭 필요!
-        params.add("partner_user_id", kakaoPay.getId().toString());
+        params.add("partner_user_id", user_id);
         params.add("item_name", kakaoPay.getItemName());
         params.add("quantity", String.valueOf(kakaoPay.getQty()));  // ✅ 문자열로
         params.add("total_amount", String.valueOf(kakaoPay.getTotalAmount()));
