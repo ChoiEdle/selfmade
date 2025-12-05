@@ -74,7 +74,7 @@ file:
 
 kakao:
   pay:
-    host: https://open-api.kakaopay.com/online/
+    host: https://open-api.kakaopay.com/online
     admin-key: DEVAAC82C58B6BBF82BBDE98D119B09D52755995 # 실제 발급받은 관리자 키
     cid: TC0ONETIME          # 가맹점 코드 (테스트용), 코드작성 X
     ready-path: /payment/ready  #카카오페이 호출 주소, 코드작성 X
