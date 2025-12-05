@@ -47,7 +47,7 @@ spring:
             client-name: Naver
 
           kakao:
-            client-id: 28A294B9EB65F7DA2C1A
+            client-id: a9f37adeecdea3bdc79ed7474c789862
             client-secret:
             redirect-uri: https://selfmade-umqd.onrender.com/login/oauth2/code/kakao
             authorization-grant-type: authorization_code
